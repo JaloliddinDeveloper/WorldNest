@@ -1,0 +1,24 @@
+﻿@model Ocean
+@{
+    ViewData["Title"] = "Ocean Details";
+}
+<div class="container mt-5">
+    <h1 class="text-center">@Model.Name</h1>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Okean Tafsilotlari</h5>
+            <p class="card-text"><strong>Maydoni:</strong> @Model.Area km²</p>
+            <p class="card-text"><strong>Manzil:</strong> @Model.Location</p>
+            <p class="card-text"><strong>Chuqurligi:</strong> @Model.Depth m</p>
+            <p class="card-text"><strong>Salinlik:</strong> @Model.Salinity ppt</p>
+            <p class="card-text"><strong>Temperatura:</strong> @Model.Temperature °C</p>
+            <p class="card-text"><strong>Biodiversitet:</strong> @Model.Biodiversity</p>
+            <p class="card-text"><strong>Asosiy oqimlar:</strong> @Model.MajorCurrents</p>
+
+            <a asp-action="Ocean" class="btn btn-secondary">Listga qaytish</a>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
