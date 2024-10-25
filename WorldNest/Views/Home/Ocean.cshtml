@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Ocean>
+@{
+    ViewData["Title"] = "Oceans";
+}
+
+<h1>Okeanlar</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Okean</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ocean in Model)
+        {
+            <tr>
+                <td>@ocean.Name</td>
+                <td>
+                    <a asp-action="DetailsOcean" asp-route-id="@ocean.Id" class="btn btn-primary">Batafsil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
