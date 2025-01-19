@@ -7,10 +7,8 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        builder.WebHost.UseUrls("http://localhost:5001");
 
-      
-
-        // Servislarni qo'shish
         builder.Services.AddControllersWithViews();
         builder.Services.AddScoped<CountryService>();
         builder.Services.AddScoped<OceanService>();
