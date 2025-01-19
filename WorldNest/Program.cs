@@ -3,13 +3,14 @@ using WorldNest.Services.Oceans;
 
 public class Program
 {
-    private static void Main(string[] args)
+    public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddControllersWithViews();
         builder.Services.AddScoped<CountryService>();
         builder.Services.AddScoped<OceanService>();
+
         var app = builder.Build();
 
         if (!app.Environment.IsDevelopment())
